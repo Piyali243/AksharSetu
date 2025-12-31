@@ -27,3 +27,9 @@ npm install
 npm start
 
 **Open the project in the Expo Go app on an Android device by scanning the QR code from the terminal or Expo dev tools.**
+
+## Download APK (Production Build)
+[📱 Install AksharSetu APK](https://expo.dev/artifacts/eas/fb8ca78b-2c35-421a-b356-a5cbda22817d.apk)
+
+Built with EAS Build • All features work: Google Translate API, Camera, TTS, 5 languages
+
