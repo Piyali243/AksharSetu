@@ -1,50 +1,29 @@
-# Welcome to your Expo app 👋
+# AksharSetu
+AksharSetu is a small mobile app that grew out of my work on the Smart India Hackathon problem statement **"Transliteration tool for street signs"**. The idea is simple: make it easier for travellers to read Indian street signs and short texts when they don't know the local script.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Features
+- Home screen with clear navigation to all tools
+- Manual input transliteration (Roman / ITRANS → Devanagari using a JS library)
+- Camera transliteration screen prepared for future OCR integration
+- Settings screen with offline-mode and text-to-speech toggles
+- About / Help screen explaining the problem statement and design goals
 
-## Get started
+## Tech stack
+- React Native with Expo
+- Expo Router for navigation
+- TypeScript
+- Tested with Expo Go on Android
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+## Running the app
 ```bash
-npm run reset-project
-```
+# clone the repo
+git clone https://github.com/Piyali243/AksharSetu.git
+cd AksharSetu
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+# install dependencies
+npm install
 
-## Learn more
+# start development server
+npm start
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**Open the project in the Expo Go app on an Android device by scanning the QR code from the terminal or Expo dev tools.**
