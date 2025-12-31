@@ -26,6 +26,8 @@ export default function AboutScreen() {
         information accessible to citizens and visitors, regardless of the
         script used on signboards.
       </Text>
+
+      <Text style={styles.contact}>For queries: piyalighosh2436@gmail.com</Text>
     </ScrollView>
   );
 }
@@ -54,4 +56,10 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginBottom: 4,
   },
+  contact: {
+  fontSize: 12,
+  color: '#666666',
+  marginTop: 32,
+  textAlign: 'center',
+},
 });

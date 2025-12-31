@@ -1,10 +1,19 @@
 // app/settings.tsx
+import * as Speech from 'expo-speech';
 import React, { useState } from 'react';
-import { StyleSheet, Switch, Text, View } from 'react-native';
+import { StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 
 export default function SettingsScreen() {
   const [offlineMode, setOfflineMode] = useState(true);
   const [ttsEnabled, setTtsEnabled] = useState(false);
+
+  const speakSample = () => {
+    Speech.speak('नमस्ते, आपका स्वागत है अक्षरसेतु में', {
+      language: 'hi',
+      pitch: 1,
+      rate: 0.8,
+    });
+  };
 
   return (
     <View style={styles.container}>
@@ -16,13 +25,16 @@ export default function SettingsScreen() {
       </View>
 
       <View style={styles.row}>
-        <Text style={styles.label}>Text‑to‑speech (pronunciation)</Text>
+        <Text style={styles.label}>Text-to-speech (pronunciation)</Text>
         <Switch value={ttsEnabled} onValueChange={setTtsEnabled} />
       </View>
 
+      <TouchableOpacity style={styles.testButton} onPress={speakSample}>
+        <Text style={styles.testText}>🗣️ Test Hindi pronunciation</Text>
+      </TouchableOpacity>
+
       <Text style={styles.note}>
-        These options are placeholders to show how AksharSetu can support
-        travellers with poor network and pronunciation help.
+        Tap button to hear "Namaste, welcome to AksharSetu"
       </Text>
     </View>
   );
@@ -49,6 +61,17 @@ const styles = StyleSheet.create({
     fontSize: 15,
     flex: 1,
     marginRight: 8,
+  },
+  testButton: {
+    backgroundColor: '#4CAF50',
+    padding: 12,
+    borderRadius: 8,
+    marginTop: 16,
+    alignItems: 'center',
+  },
+  testText: {
+    color: 'white',
+    fontSize: 16,
   },
   note: {
     marginTop: 16,
